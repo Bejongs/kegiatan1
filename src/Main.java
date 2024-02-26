@@ -5,7 +5,6 @@ public class Main {
     private static final String[] usernameSiswa = { "202310370311123", "12345678", "11111", "140505" };
     private static final String usernameAdmin = "admin";
     private static final String passwordAdmin = "admin123";
-    private static int indeksSiswa = -1;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,13 +21,12 @@ public class Main {
             switch (pilihan) {
                 case 1:
                     System.out.print("Enter your NIM: ");
-                    
+
                     String nim = scanner.next();
 
                     boolean ditemukan = false;
                     for (int i = 0; i < usernameSiswa.length; i++) {
                         if (usernameSiswa[i].equals(nim)) {
-                            indeksSiswa = i;
                             ditemukan = true;
                             break;
                         }
